@@ -1,0 +1,6 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+# For base64 decoding if needed, though standard library has it.
+# Just ensuring we have the web framework ready.
