@@ -11,12 +11,12 @@ def save_image(nombre_archivo: str, b64_content: str, tipo: str) -> str:
     Returns the absolute path of the saved file.
     """
     # Normalize 'tipo' to handle receipts, invoices, or Other
-    if tipo.lower() == "receipts":
-        subfolder = "receipts"
-    elif tipo.lower() == "invoices":
-        subfolder = "invoices"
+    if tipo.upper() == "COMPROBANTE":
+        subfolder = "COMPROBANTE"
+    elif tipo.upper() == "FACTURA":
+        subfolder = "FACTURA"
     else:
-        subfolder = "Other"
+        subfolder = "OTRO"
 
     # Create target directory if it doesn't exist
     target_dir = BASE_STORAGE_PATH / subfolder
